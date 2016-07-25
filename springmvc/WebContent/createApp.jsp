@@ -19,7 +19,7 @@
     } 
     function Juge(myform){
     	if (myform.Description.value==""||myform.Rating.value==""||myform.Name.value==""){
-    		alert("请输入完整");
+    		alert("未输入完整！！");
     		myform.Description.focus();
     		return false;
     	}

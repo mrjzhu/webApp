@@ -24,13 +24,20 @@
          		   window.event.returnValue = false; 
        		 	} 
     		} 
+    	    function Juge(myform){
+    	    	if (myform.cardNo.value==""||myform.password.value==""||myform.password2.value==""){
+    	    		alert("Œ¥ ‰»ÎÕÍ’˚£°£°£°");
+    	    		myform.cardNo.focus();
+    	    		return false;
+    	    	}
+    	    }
 		</script>
 
         <div id="main">
         	
         	<h1>Sign up, it's FREE!</h1>
         	
-        	<form method="post" action="signUp.do">
+        	<form method="post" action="signUp.do" onsubmit="return Juge(this)">
         		
         		<div class="row email">
 	    			<input type="text" id="cardNo" name="cardNo" placeholder="cardNo" />

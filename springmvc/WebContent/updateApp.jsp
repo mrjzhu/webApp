@@ -31,7 +31,7 @@
     }
     function Juge(myform){
     	if (myform.Description.value==""||myform.Rating.value==""||myform.Name.value==""){
-    		alert("«Î ‰»ÎÕÍ’˚");
+    		alert("please complete all the option");
     		myform.Description.focus();
     		return false;
     	}

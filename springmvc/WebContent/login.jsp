@@ -25,6 +25,15 @@
 
     </head>
 
+	<script>
+	    function Juge(myform){
+	    	if (myform.Description.value==""||myform.Rating.value==""||myform.Name.value==""){
+	    		alert("Œ¥ ‰»ÎÕÍ’˚£°£°£°");
+	    		myform.Description.focus();
+	    		return false;
+	    	}
+	    }
+	</script>
     <body>
 
         <div class="page-container">
@@ -32,7 +41,7 @@
             <form action="login.do" method="post">
                 <input type="text" name="cardNo" class="username" placeholder="username">
                 <input type="password" name="password" class="password" placeholder="password">
-                <button type="submit" class="submit_button">Login</button>
+                <button type="submit" class="submit_button" onsubmit="return Juge(this)">Login</button>
                 <a href="signup.jsp"><input type="button" value="signUp"></input></a>
              
                 <div class="error"><span>+</span></div>
