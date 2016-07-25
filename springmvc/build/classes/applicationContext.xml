@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	<bean id="loginController" class="com.pb.web.controller.LoginController">
+		<property name="successView" value="showAccount"></property>
+		<property name="failView" value="error"></property>
+				<property name="admin" value="adminPage"></property>
+
+	</bean>
+	
+	<bean id="signUp" class="com.pb.web.controller.signUp">
+		<property name="successView" value="login"></property>
+		<property name="failView" value="error"></property>
+		
+	</bean>
+	
+	<bean id="getTopApps" class="com.pb.web.controller.getTopApps">
+		<property name="successView" value="adminPage"></property>		
+	</bean>
+	
+	<bean id="createApp" class="com.pb.web.controller.createApp">
+		<property name="successView" value="error"></property>	
+		<property name="failView" value="error"></property>
+			
+	</bean>
+	
+	<bean id="getApp" class="com.pb.web.controller.getApp">
+		<property name="successView" value="deleteApp"></property>	
+		<property name="failView" value="updateApp"></property>
+		<property name="table" value="showApp"></property>
+			
+	</bean>
+	
+	<bean id="deleteApp" class="com.pb.web.controller.deleteApp">
+		<property name="successView" value="deleteApp"></property>	
+		<property name="failView" value="error"></property>
+			
+	</bean>
+	
+	<bean id="updateApp" class="com.pb.web.controller.updateApp">
+		<property name="successView" value="updateApp"></property>	
+		<property name="failView" value="error"></property>
+			
+	</bean>
+		<bean id="updateApp_up" class="com.pb.web.controller.updateApp_up">
+		<property name="successView" value="showAccount"></property>	
+			
+	</bean>
+	<bean id="getRecommendApp" class="com.pb.web.controller.getRecommendApp">
+		<property name="successView" value="recommend"></property>	
+			
+	</bean>
+	
+	
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.do">loginController</prop>
+				<prop key="/signUp.do">signUp</prop>
+				<prop key="/app.do">getTopApps</prop>
+				<prop key="/create.do">createApp</prop>
+				<prop key="/getApp.do">getApp</prop>
+				<prop key="/delete.do">deleteApp</prop>
+				<prop key="/update.do">updateApp</prop>
+				<prop key="/update_up.do">updateApp_up</prop>
+				<prop key="/recommend.do">getRecommendApp</prop>
+				
+				
+				
+			
+			</props>
+		</property>
+	</bean>
+	
+		
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+</beans>
