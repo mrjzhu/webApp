@@ -71,11 +71,11 @@
     	a.style.display="";
     	}
     
-    $(document).ready(function(){
+/*     $(document).ready(function(){
     	  $("button").click(function(){
-    	    $("#table").fadeToggle("slow").fadeToggle("fast");
+    	    $("#table").fadeToggle("slow");
     	  });
-    	});
+    	}); */
     </script>
     <body>
     
@@ -96,10 +96,9 @@
 				</form>	
 				<a href="login.jsp"class="button blue">Back</a> <br>	
 						
- 				<form action="app.do" method="post">
-					<input class="button blue" id="submit"type="submit" value="showApps" onMouseOut="showtable()">
+ 				<form action="getApp.do" method="post">
+					<input class="button blue" id="submit"type="submit" value="showApps" name="option"onMouseOut="showtable()">
 				</form>
-				<button class="button blue">Òþ²Ø/ÏÔÊ¾</button>
 			
 			</div>
 	<table  id="table"border=1 cellspacing=0 cellpadding=0 bordercolordark="#000000" bordercolorlight="#ffffff">

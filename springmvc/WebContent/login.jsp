@@ -6,7 +6,7 @@
     <head>
 
         <meta charset="utf-8" >
-        <title>Login</title>
+        <title style="font-family:Arial">WELCOME TO WEB APP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -43,7 +43,7 @@
 		}
 		</script>
         <div class="page-container">
-            <h1>Login</h1>
+            <h1 style="font-family:Arial">Web App</h1>
             <form action="login.do" method="post">
                 <input type="text" name="cardNo" class="username" placeholder="username">
                 <input type="password" name="password" class="password" placeholder="password">

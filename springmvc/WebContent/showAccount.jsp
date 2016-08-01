@@ -133,7 +133,7 @@
 					document.write("<form name='form"+num+"'style='display:none' action='recommend.do' method='post'><input type='text' name='Rating' value='"+array_top5_4[i]+"'><input type='text' name='Name' value='"+array_top5[i]+"'></form>");
 
 					document.write("<li class='ff-item-type-2'>");
-					document.write("<p>"+num+"."+array_top5[i]+"</p>");
+					document.write("<p style='font-family:Arial; font-size:12px; color:#000'>"+num+"."+array_top5[i]+"</p>");
 					document.write("<form><a href='javascript:document.form"+num+".submit();'>");
 					document.write("<span>"+array_top5_2[i]+"</span>");
 					document.write("<img src='"+"assets/images/"+array_top5_3[i]+"'/></a></form></li>")
@@ -151,7 +151,7 @@
 					document.write("<form name='form"+n+"'style='display:none' action='recommend.do' method='post'><input type='text' name='Rating' value='"+array4[i]+"'><input type='text' name='Name' value='"+array[i]+"'></form>");
 
 					document.write("<li class='ff-item-type-1'>");
-					document.write("<p>"+num+"."+array[i]+"</p>");
+					document.write("<b style='font-family:Arial; font-size:12px; color:#000'>"+num+"."+array[i]+"</b>");
 					document.write("<form><a href='javascript:document.form"+n+".submit();'>");
 					document.write("<span>"+array2[i]+"</span>");
 					document.write("<img src='"+"assets/images/"+array3[i]+"'/></a></form></li>")
