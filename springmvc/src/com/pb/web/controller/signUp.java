@@ -48,19 +48,19 @@ public class signUp extends AbstractController {
 		DBCursor x=collection.find(query);
 		Map<String ,Object> model=new HashMap<String,Object>();
 		if(x.hasNext()){
-			model.put("error", "账号已存在");
+			model.put("error", "exist");
 			return new ModelAndView(getFailView(),model);
 		}
 		else{
 			if(!password.equals(password2)){
-				model.put("error", "两次密码不一致");
+				model.put("error", "double");
 				return new ModelAndView(getFailView(),model); 
 			}
 			query.put("password", password);
 			collection.insert(query);
 			Account account =getAccount(cardNo,password);
 			model.put("account", account);
-			model.put("tips", "注册成功");
+			model.put("error", "successful");
 			return new ModelAndView(getSuccessView(),model);
 		}
 			

@@ -92,10 +92,9 @@ public class LoginController extends AbstractController {
 			}
 			model.put("list_top5", list_top5);
 			
-			
 			return new ModelAndView(getSuccessView(),model);
 		}else{
-			model.put("error", "账号错误");
+			model.put("error", "error");
 			return new ModelAndView(getFailView(),model);
 		}		
 	}

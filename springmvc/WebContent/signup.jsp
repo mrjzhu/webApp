@@ -31,7 +31,18 @@
     	    		return false;
     	    	}
     	    }
+    		var a="${error}";
+    		if(a=="exist"){
+    			alert("账户已存在");
+    		}
+    		if(a=="double"){
+    			alert("两次密码不一致");
+    		}
+    		if(a=="successful"){
+    			alert("注册成功");
+    		}
 		</script>
+
 
         <div id="main">
         	

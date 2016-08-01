@@ -10,14 +10,14 @@
 	
 	<bean id="loginController" class="com.pb.web.controller.LoginController">
 		<property name="successView" value="showAccount"></property>
-		<property name="failView" value="error"></property>
+		<property name="failView" value="login"></property>
 				<property name="admin" value="adminPage"></property>
 
 	</bean>
 	
 	<bean id="signUp" class="com.pb.web.controller.signUp">
-		<property name="successView" value="login"></property>
-		<property name="failView" value="error"></property>
+		<property name="successView" value="signup"></property>
+		<property name="failView" value="signup"></property>
 		
 	</bean>
 	

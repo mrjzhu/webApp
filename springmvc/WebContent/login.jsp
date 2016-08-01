@@ -35,7 +35,13 @@
 	    }
 	</script>
     <body>
-
+		
+		<script>
+		var a="${error}";
+		if(a=="error"){
+			alert("Not Correct !!");
+		}
+		</script>
         <div class="page-container">
             <h1>Login</h1>
             <form action="login.do" method="post">
