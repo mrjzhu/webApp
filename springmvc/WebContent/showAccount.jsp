@@ -128,7 +128,7 @@
 				for(var i=0;i<size2;i++){
 					var num=i+1;
 					if((num-1)%3==0){
-						document.write("<hr>");
+						document.write("<hr style='visibility:hidden'>");
 					}
 					document.write("<form name='form"+num+"'style='display:none' action='recommend.do' method='post'><input type='text' name='Rating' value='"+array_top5_4[i]+"'><input type='text' name='Name' value='"+array_top5[i]+"'></form>");
 
@@ -145,7 +145,7 @@
 				for(var i=0;i<size1;i++){
 					var num=i+1;
 					if((num-1)%3==0){
-						document.write("<hr>");
+						document.write("<hr style='visibility:hidden'>");
 					}
 					var n=num+100;
 					document.write("<form name='form"+n+"'style='display:none' action='recommend.do' method='post'><input type='text' name='Rating' value='"+array4[i]+"'><input type='text' name='Name' value='"+array[i]+"'></form>");

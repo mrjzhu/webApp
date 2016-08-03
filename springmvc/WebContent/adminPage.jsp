@@ -66,10 +66,7 @@
 		<script type="text/javascript" src="assets/js/modernizr.custom.29473.js"></script>
     </head>
     <script>
-    function showtable(){
-    	var a=document.getElementById("line");
-    	a.style.display="";
-    	}
+
     
 /*     $(document).ready(function(){
     	  $("button").click(function(){
@@ -101,7 +98,7 @@
 				</form>
 			
 			</div>
-	<table  id="table"border=1 cellspacing=0 cellpadding=0 bordercolordark="#000000" bordercolorlight="#ffffff">
+<!-- 	<table  id="table"border=1 cellspacing=0 cellpadding=0 bordercolordark="#000000" bordercolorlight="#ffffff">
 		<tr id="line" style="display:none"><td>Name:</td><td>Description</td><td>Rating</td></tr>
 
 	<script>
@@ -124,7 +121,7 @@
 			}
 
 	</script>  
-		</table>
+		</table> -->
 		
 		
 						<div style="text-align:center;clear:both;">
